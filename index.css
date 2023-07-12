@@ -1,0 +1,259 @@
+:root{
+    --primary-color: #CD7F32;
+    --secondary-color: #1C1C1C;
+    --font: sans-serif;
+}
+
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: var(--secondary-color);
+
+    margin: 0;
+    padding: 0;
+}
+
+#navigation-bar{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+}
+
+#navigation-bar a.text{
+    position: relative;
+    right: 1%;
+
+    margin-right: 15px;
+    margin-left: 10px;
+
+    font-size: 17px;
+    font-family: var(--font);    
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#navigation-bar a.text{   
+    color: var(--secondary-color);
+    filter: brightness(150%);
+}
+
+#navigation-bar a.text:hover{    
+    color: var(--secondary-color);
+    filter: brightness(0%);
+}
+
+#navigation-bar a.icon{
+    position: relative;
+    right: 1%;
+
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#navigation-bar a.icon{   
+    color: var(--secondary-color);
+}
+
+#navigation-bar a.icon:hover{    
+    color: var(--secondary-color);
+    filter: brightness(0%);
+}
+
+
+#introduction{
+    position: relative;
+    top: -19px;
+    left: 0;
+
+    height: 60vh;
+}
+
+#introduction #intro{
+    position: relative;
+
+    top: 30%;
+    left: 5%;
+
+    width: 29%;
+
+    font-family: var(--font);
+    color: var(--primary-color);
+}
+
+#introduction #intro h1{
+    width: 60%;
+
+    font-size: 40px;
+}
+
+#introduction #contact{
+    position: relative;
+
+    top: 35%;
+    left: 5%;
+
+    width: 95%;
+}
+
+#introduction #contact a{
+    background-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+#introduction #contact a:hover{
+    background-color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+#introduction #contact div{
+    position: relative;
+
+    top: 20px;
+
+    font-family: var(--font);
+    color: var(--primary-color);
+}
+
+#introduction #contact div b{
+    padding-right: 10px;
+}
+
+#skills{
+    position: relative;
+    top: -19px;
+
+    height: 10vh;
+}
+
+#skills .title{
+    position: relative;
+    top: 8%;
+
+    text-align: center;
+
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+#skills .list{
+    position: relative;
+
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#skills .list .skill{
+    background-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+#skills .list .skill:hover{
+    background-color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+hr{
+    position: relative;
+    top: -19px;
+    left: 0;
+
+    width: 96vw;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#extras{
+    position: relative;
+    top: -19px;
+
+    height: 58vh;
+
+    display: flex;
+}
+
+#portfolio{
+    position: relative;
+
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cv{
+    position: relative;
+
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#extras .title{
+    position: relative;
+    top: 30%;
+
+    text-align: center;
+
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 50px;
+}
+
+#extras a{
+    position: relative;
+    top: 45%;
+}
+
+#extras a{
+    background-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important
+}
+
+#extras a:hover{
+    background-color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.divider {
+    position:absolute;
+    top: 10%;
+    left: 50%;
+
+    height: 80%;
+
+    border-left: 4px solid var(--primary-color); 
+    border-radius: 5px;
+}

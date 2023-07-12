@@ -1,0 +1,327 @@
+:root {
+  --primary-color: #cd7f32;
+  --secondary-color: #1c1c1c;
+  --font: sans-serif;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: var(--secondary-color);
+
+  margin: 0;
+  padding: 0;
+}
+
+#navigation-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: end;
+
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 999;
+}
+
+#navigation-bar a.text {
+  position: relative;
+  right: 1%;
+
+  margin-right: 15px;
+  margin-left: 10px;
+
+  font-size: 17px;
+  font-family: var(--font);
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+#navigation-bar a.text {
+  color: var(--secondary-color);
+  filter: brightness(150%);
+}
+
+#navigation-bar a.text:hover {
+  color: var(--secondary-color);
+  filter: brightness(0%);
+}
+
+#navigation-bar a.icon {
+  position: relative;
+  right: 1%;
+
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#navigation-bar a.icon {
+  color: var(--secondary-color);
+}
+
+#navigation-bar a.icon:hover {
+  color: var(--secondary-color);
+  filter: brightness(0%);
+}
+
+#certificates{
+  position: relative;
+
+  height: 40%;
+}
+
+#certificates .title{
+  position: relative;
+  top: 8%;
+
+  text-align: center;
+
+  font-family: var(--font);
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+
+#certificates hr{
+  position: relative;
+  top: 10%;
+  left: 0;
+
+  width: 20vw;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+#certificates .container{
+  position: relative;
+  top: 15%;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------- SHOW CASE STYLING START --------------------------------- */
+
+.light-button{
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.light-button button.bt {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+
+.light-button button.bt .button-holder svg {
+  height: 50px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder svg {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: var(--primary-color);
+  outline:  var(--primary-color) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg,  var(--primary-color) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* --------------------------------- SHOW CASE STYLING END --------------------------------- */
+
+#separator{
+  position: relative;
+
+  width: 100vw;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+#portfolio{
+  position: relative;
+  top: 5%;
+
+  height: 60%;
+}
+
+#portfolio .title{
+  position: relative;
+
+  text-align: center;
+
+  font-family: var(--font);
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+
+#portfolio hr{
+  position: relative;
+  top: 2%;
+  left: 0;
+
+  width: 20vw;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+#portfolio .container{
+  position: relative;
+  top: 5%;
+  left: 5%;
+
+  width: 90%;
+
+  border: 4px solid var(--primary-color);
+  border-radius: 5px;
+
+  padding: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 4%;
+  row-gap: 50px;
+}
+
+#portfolio .container a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+#portfolio .container a:hover{
+  color: var(--secondary-color);
+}
+
+/* --------------------------------- CARD STYLING START --------------------------------- */
+
+.card {
+  width: 190px;
+  height: 254px;
+  background: var(--secondary-color);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background: var(--primary-color);
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+  position: relative;
+  left: 10%;
+
+  width: 80%;
+
+  opacity: 1;
+  height: 100%;
+  font-size: 0.9rem;
+  transform: rotate(0deg);
+}
+
+/* --------------------------------- CARD STYLING END --------------------------------- */
