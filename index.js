@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  $introduction = $("#introduction");
+  $skills = $("#skills");
+  $extras = $("#extras");
+  $hr = $("hr")
+  $theMenu = $("#menu");
+  $nav = $("#navigation-bar");
+
   $('.contactButton').click(function() {
     $('#contact div').fadeIn();
   });
@@ -21,4 +28,18 @@ $(document).ready(function() {
   });
 
   alterClass();
+
+  $("#navigation-bar .menu-button").on("click", function(){
+    $theMenu.animate({width: "toggle"}, 340, function(){});
+  });
+
+  $("#menu .menu-button").on("click", function(){
+    $introduction.css("display", "flex");
+    $skills.css("display", "block");
+    $extras.css("display", "flex");
+    $hr.css("display", "block");
+
+    $nav.css({width: "100vw"});
+    $theMenu.animate({width: "toggle"}, 340);
+  });
 });
