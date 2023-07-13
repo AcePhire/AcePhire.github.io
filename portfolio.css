@@ -22,6 +22,7 @@ body {
   top: 0;
   left: 0;
 
+  width: 300vw;
   height: 60px;
 
   display: flex;
@@ -34,51 +35,112 @@ body {
   z-index: 999;
 }
 
-#navigation-bar a.text {
-  position: relative;
-  right: 1%;
+.menu-button {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 50px;
+  height: 36px;
 
-  margin-right: 15px;
-  margin-left: 10px;
+  border-radius: 6px;
 
-  font-size: 17px;
-  font-family: var(--font);
-  font-weight: 600;
+  background-color: var(--primary-color);
 
   cursor: pointer;
 }
 
-#navigation-bar a.text {
-  color: var(--secondary-color);
-  filter: brightness(150%);
+.menu-button:hover {
+  filter: brightness(75%) drop-shadow(0 0 2px black);
 }
 
-#navigation-bar a.text:hover {
-  color: var(--secondary-color);
-  filter: brightness(0%);
-}
-
-#navigation-bar a.icon {
+.menu-button img {
   position: relative;
-  right: 1%;
+  top: 3px;
+  left: 10px;
 
-  margin-left: 5px;
+  width: 30px;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  width: calc(1920px * 0.2);
+  height: 300vh;
+
+  display: none;
+
+  filter: drop-shadow(1px 0 5px black);
+  background-color: var(--primary-color);
+  border-radius: 1px;
+  z-index: 2;
+}
+
+#menu #menu-button {
+  display: block;
+
+  background-color: var(--primary-color);
+}
+
+#menu #menu-button:hover {
+  filter: brightness(75%) drop-shadow(0 0 2px black);
+}
+
+#menu ul{
+    position: relative;
+    top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#menu ul li {
+  position: relative;
+  margin-bottom: 5px;
+  left: -6%;
+  width: calc(100% - 10px);
+  height: 50px;
+
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+
+  list-style-type: none;
   cursor: pointer;
 }
 
-#navigation-bar a.icon {
-  color: var(--secondary-color);
+#menu ul li:hover {
+  filter: brightness(75%);
 }
 
-#navigation-bar a.icon:hover {
-  color: var(--secondary-color);
-  filter: brightness(0%);
+#menu ul li span {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+
+  color: var(--primary-color);
+  font-family: var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#menu ul li a{
+  position: absolute;
+  top: 5px;
+  width: 100%;
+
+  color: var(--primary-color);
+  font-family: var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 #certificates{
   position: relative;
-
-  height: 40%;
+ 
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
 
 #certificates .title{
@@ -98,7 +160,7 @@ body {
   top: 10%;
   left: 0;
 
-  width: 20vw;
+  width: 80%;
 
   border: 2px solid var(--primary-color);
   border-radius: 5px;
@@ -115,6 +177,7 @@ body {
 /* --------------------------------- SHOW CASE STYLING START --------------------------------- */
 
 .light-button{
+  margin-top: 20px;
   margin-right: 1%;
   margin-left: 1%;
 }
@@ -248,7 +311,7 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   column-gap: 4%;
   row-gap: 50px;
 }
@@ -325,3 +388,15 @@ body {
 }
 
 /* --------------------------------- CARD STYLING END --------------------------------- */
+
+@media (max-width: 515px) {
+  #certificates{
+    position: relative;
+   
+    
+  }  
+
+  #certificates .container{
+    flex-wrap: wrap;
+  }
+}

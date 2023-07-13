@@ -34,12 +34,6 @@ $(document).ready(function() {
   });
 
   $("#menu .menu-button").on("click", function(){
-    $introduction.css("display", "flex");
-    $skills.css("display", "block");
-    $extras.css("display", "flex");
-    $hr.css("display", "block");
-
-    $nav.css({width: "100vw"});
     $theMenu.animate({width: "toggle"}, 340);
   });
 });
