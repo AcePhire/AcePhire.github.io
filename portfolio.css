@@ -72,7 +72,7 @@ body {
   filter: drop-shadow(1px 0 5px black);
   background-color: var(--primary-color);
   border-radius: 1px;
-  z-index: 2;
+  z-index: 5;
 }
 
 #menu #menu-button {
