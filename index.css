@@ -220,6 +220,7 @@ body {
   font-size: 25px;
 }
 
+
 #skills .list {
   position: relative;
 
@@ -328,6 +329,15 @@ hr {
     font-size: 40px;
   }
 }
+/* ------------------------------------------ */
+
+@media (max-width: 1312px) {
+  #introduction {
+    margin-bottom: 20px;
+  }
+}
+
+/* ------------------------------------------ */
 
 @media (max-width: 1200px) {
   #extras .title {
@@ -335,11 +345,23 @@ hr {
   }
 }
 
+/* ------------------------------------------ */
+
+@media (max-width: 1005px) {
+  #introduction {
+    margin-bottom: 35px;
+  }
+}
+
+/* ------------------------------------------ */
+
 @media (max-width: 980px) {
   #extras .title {
     font-size: 32px;
   }
 }
+
+/* ------------------------------------------ */
 
 @media (max-width: 875px) {
   #extras .title {
@@ -347,9 +369,23 @@ hr {
   }
 }
 
+/* ------------------------------------------ */
+
+@media (max-width: 865px) {
+  #introduction {
+    margin-bottom: 50px;
+  }
+}
+
+/* ------------------------------------------ */
+
 @media (max-width: 800px) {
   #introduction #intro {
     width: 80%;
+  }
+
+  #introduction {
+    margin-bottom: -40px;
   }
 
   #extras {
@@ -359,7 +395,9 @@ hr {
   }
 
   #extras .title {
-    margin-bottom: 30px;
+    font-size: 25px;
+
+    margin-bottom: 10px;
   }
 
   #portfolio {
@@ -377,13 +415,23 @@ hr {
   }
 }
 
-@media (max-width: 800px) {
-  #extras .title {
-    font-size: 25px;
+/* ------------------------------------------ */
 
-    margin-bottom: 10px;
+@media (max-width: 598px) {
+  #introduction {
+    margin-bottom: -15px;
   }
 }
+
+/* ------------------------------------------ */
+
+@media (max-width: 475px) {
+  #introduction {
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------ */
 
 @media (max-width: 444px) {
     #skills {
@@ -399,4 +447,12 @@ hr {
         flex-wrap: wrap;
         row-gap: 10px;
     }
+}
+
+  /* ------------------------------------------ */
+
+@media (max-width: 364px) {
+  #introduction {
+    margin-bottom: 30px;
   }
+}
