@@ -3,402 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Abdallah Joudeh | Digital Security Technologist</title>
+    <meta name="description" content="Digital Security Technologist and Certified Kubernetes Administrator building open-source tools for journalists and civil society.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<style>
-    body {
-        font-family: 'Playfair Display', serif;
-    }
-    .profile-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1px solid #030303;
-        border-color: #C5C5C5;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        max-width: 300px;
-        margin: auto;
-        text-align: center;
-    }
-    .profile-card img {
-        width: 200px;
-        height: 250px;
-        border-radius: 5%;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-    .profile-card h2 {
-        margin-bottom: 5px;
-    }
-    .profile-card h4 {
-        margin-bottom: 20px;
-        color: #d5d3d3;
-        font-size: 16pt;
-    }
-    .social-media {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .social-media a {
-        margin: 0 10px;
-        color: #C5C5C5;
-        font-size: 1.2rem;
-    }
-    .social-media a:hover {
-        color: #939393;
-    }
-    .about-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-    @media (max-width: 768px) {
-        .about-container {
-            flex-direction: column;
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-900: #2C423F;
+            --green-800: #394D4B;
+            --green-700: #465756;
+            --green-600: #536261;
+            --text: #C5C5C5;
+            --text-light: #FFFFF0;
+            --muted: #a19e9e;
         }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Playfair Display', serif; }
+        section { padding: 50px 20px; }
+        .section-heading { color: var(--text); text-align: center; font-size: 3rem; margin-bottom: 10px; }
+        hr.custom-hr { border: none; border-top: 2px solid #fff; width: 50%; margin: 20px auto 30px; opacity: 1; }
+
+        .navbar-nav .nav-link { color: #c9c9c1; font-size: 1.2rem; transition: font-size .3s, text-decoration .3s; }
+        .navbar-nav .nav-link:hover { text-decoration: underline; font-size: 1.4rem; }
+
         .profile-card {
-            margin-bottom: 20px;
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            border: 1px solid #C5C5C5; padding: 20px; border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1); max-width: 300px; margin: auto;
         }
-        .profile-card img {
-            width: 150px;
-            height: 200px;
+        .profile-card img { width: 200px; height: 250px; border-radius: 5%; object-fit: cover; margin-bottom: 20px; }
+        .profile-card h2 { margin-bottom: 5px; }
+        .profile-card h4 { margin-bottom: 15px; color: #d5d3d3; font-size: 1.2rem; }
+        .profile-card p { font-size: 1rem; word-wrap: break-word; margin-bottom: 6px; }
+        .social-media a { margin: 0 10px; color: var(--text); font-size: 1.4rem; }
+        .social-media a:hover { color: #939393; }
+        .about-text { font-size: 1.2rem; line-height: 1.7; }
+
+        .badge-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 15px; }
+        .cert-badge {
+            border: 1px solid var(--green-600); background: var(--green-900); color: var(--text-light);
+            border-radius: 8px; padding: 10px 16px; font-size: 1rem;
         }
-    }
-    @media (max-width: 576px) {
-        .profile-card h4 {
-            font-size: 14pt;
+        .cert-badge i { margin-right: 8px; }
+
+        /* Experience */
+        .exp-header h3 { color: var(--text-light); margin-bottom: 4px; }
+        .exp-header p { color: var(--muted); margin-bottom: 20px; }
+        .exp-item {
+            background: var(--green-900); border: 1px solid var(--green-600); border-radius: 8px;
+            padding: 18px 22px; margin-bottom: 14px; color: var(--text);
         }
-        .text-center p {
-            font-size: 14pt;
+        .exp-item h5 { color: var(--text-light); font-weight: 700; margin-bottom: 8px; }
+        .exp-item p { margin: 0; line-height: 1.6; }
+        .exp-item .tech { color: var(--muted); font-size: .95rem; margin-top: 8px; }
+
+        /* Skills */
+        .skill-group { max-width: 1000px; margin: 0 auto 22px; }
+        .skill-group h4 { color: var(--text-light); text-align: center; margin-bottom: 12px; font-size: 1.3rem; }
+        .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .skill-tag {
+            background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px;
+            padding: 8px 16px; font-size: 1rem; font-weight: bold; color: #191919;
         }
-        .section-title h2 {
-            font-size: 36pt;
+        .skill-tag i { margin-right: 6px; }
+
+        /* Projects */
+        .project-card {
+            background: var(--green-900); border: 1px solid var(--green-600); border-radius: 8px;
+            display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+            width: 320px; padding: 20px; margin: 10px; text-align: center;
         }
-        .container-fluid.text-center h1 {
-            font-size: 36pt;
+        .project-name { color: var(--text); font-size: 1.6rem; margin-bottom: 10px; font-weight: bold; }
+        .project-desc { color: var(--text); font-size: 1.05rem; margin-bottom: 10px; }
+        .project-lang { font-size: .95rem; color: var(--muted); margin-bottom: 12px; }
+        .view-btn {
+            background: var(--green-600); color: var(--text); padding: 10px 20px; border: none;
+            border-radius: 5px; cursor: pointer; transition: background-color .3s;
         }
-    }
-    hr.custom-hr {
-        border: none;
-        border-top: 2px solid #fff;
-        width: 50%;
-        margin: 20px auto;
-    }
-    .about-text {
-        font-size: 1.5rem; /* Default size */
-    }
-    @media (max-width: 768px) {
-        .about-text {
-            font-size: 1rem; /* Smaller screens */
+        .view-btn:hover { background: #465756; }
+        .sub-heading { color: var(--text); text-align: center; font-size: 1.6rem; margin: 30px 0 5px; }
+
+        /* Education */
+        .edu-card { max-width: 700px; margin: 0 auto; text-align: center; color: var(--text); }
+        .edu-card h4 { color: var(--text-light); }
+
+        @media (max-width: 768px) {
+            .about-text { font-size: 1rem; }
+            .profile-card { margin-bottom: 20px; }
+            .profile-card img { width: 150px; height: 200px; }
+            .navbar-nav .nav-link { font-size: 1rem; }
+            .section-heading { font-size: 2.4rem; }
         }
-    }
-    @media (min-width: 992px) {
-        .about-text {
-            font-size: 1.2rem; /* Larger screens */
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.6rem; }
+            .hero { padding: 90px 20px !important; }
         }
-    }
-    .navbar-nav .nav-link {
-        font-size: 1.2rem; /* Responsive font size */
-        transition: font-size 0.3s, text-decoration 0.3s; /* Smooth transition */
-    }
-
-    .navbar-nav .nav-link:hover {
-        text-decoration: underline; /* Underline on hover */
-        font-size: 1.4rem; /* Larger font size on hover */
-    }
-
-    @media (max-width: 768px) {
-        .navbar-nav .nav-link {
-            font-size: 1rem; /* Smaller font size for smaller screens */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .animate__animated, .fa-bounce { animation: none !important; }
         }
-    }
-
-    .profile-card p {
-        font-size: 1rem;
-        word-wrap: break-word;
-    }
-    @media (max-width: 768px) {
-        .profile-card p {
-            font-size: 0.9rem;
-        }
-    }
-    @media (max-width: 576px) {
-        .profile-card p {
-            font-size: 0.8rem;
-        }
-    }
-
-    .skills-icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px 0;
-    }
-
-    .skill-card {
-        background-color: #f8f9fa;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 180px;
-        padding: 20px;
-        margin: 10px;
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-icon {
-        font-size: 2rem;
-        color: #191919;
-        margin-bottom: 10px;
-    }
-
-    .skill-name {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .skill-category {
-        font-size: 1rem;
-        color: #555;
-    }
-
-    .project-card {
-        background-color: #2C423F;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        border-color: #536261;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 300px;
-        padding: 20px;
-        margin: 10px;
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project-name {
-        color: #C5C5C5;
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-
-    .project-desc {
-        color: #C5C5C5;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-    .project-lang {
-        font-size: 1rem;
-        color: #a19e9e;
-        margin-bottom: 10px;
-    }
-
-    .view-btn {
-        background-color: #536261;
-        color: #C5C5C5;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .view-btn:hover {
-        background-color: #465756;
-    }
-</style>
+    </style>
+</head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color: #2C423F;">
+<nav class="navbar navbar-expand-lg" style="background-color: var(--green-900);">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" style="color: #c9c9c1">Learn about me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects" style="color: #c9c9c1">View my projects</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
-<div class="container-fluid text-center" style="background-color: #2C423F; color: #FFFFF0; padding: 150px">
-    <div>
-        <h1 class="display-1 animate__animated animate__fadeInDown">Abdallah Joudeh</h1>
-        <h3>I'm a Cyber Security Student & Malware Analyst (in Training)</h3>
-        <br>
-        <a href="#about"><i class="fa-solid fa-arrow-down fa-bounce fa-2xl" style="color: #ffffff;"></i></a>
-    </div>
-</div>
+<!-- Hero -->
+<header class="hero container-fluid text-center" style="background-color: var(--green-900); color: var(--text-light); padding: 150px 20px;">
+    <h1 class="display-1 animate__animated animate__fadeInDown">Abdallah Joudeh</h1>
+    <h3>Digital Security Technologist &amp; Certified Kubernetes Administrator</h3>
+    <br>
+    <a href="#about" aria-label="Scroll to About"><i class="fa-solid fa-arrow-down fa-bounce fa-2xl" style="color: #ffffff;"></i></a>
+</header>
 
-<!-- About Section -->
-<div id="about" class="container-fluid" style="background-color: #394D4B; padding: 50px; color: #C5C5C5">
-    <div class="section-title">
-        <h2 style="text-align: center; padding: 5px; font-size: 3.5rem">~$whoami</h2>
-        <hr class="custom-hr">
-        <br>
-    </div>
+<!-- About -->
+<section id="about" style="background-color: var(--green-800); color: var(--text);">
+    <h2 class="section-heading">~$whoami</h2>
+    <hr class="custom-hr">
     <div class="row justify-content-center">
         <div class="col-md-3">
-            <div class="profile-card text-center" >
-                <img src="profile_pic.jpg" class="img-fluid profile-img" alt="Abdallah Joudeh Photo">
+            <div class="profile-card">
+                <img src="profile_pic.jpg" class="img-fluid profile-img" alt="Abdallah Joudeh">
                 <h2>Abdallah Joudeh</h2>
-                <h4>Cybersecurity Student</h4>
+                <h4>Digital Security Technologist</h4>
+                <p>Amman, Jordan</p>
                 <p>abdallahjoudeh2003@outlook.com</p>
                 <div class="social-media">
-                    <a href="https://www.linkedin.com/in/abdallah-joudeh-480a78206/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/AcePhire" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ajoudeh27" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AcePhire" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <p class="about-text">Hello! My name is Abdallah Joudeh, and I am a Cybersecurity student at Al Hussein University in Amman, Jordan. I aspire to become a skilled malware analyst.<br><br>
-                My passion for cybersecurity has led me to participate in several in-person Capture The Flag (CTF) competitions, where I've sharpened my problem-solving skills. Additionally, I have earned the CompTIA Security+ certification, strengthening my understanding of network security, cryptography, and risk management.</p>
-            <div><img src="sec_plus_badge_1.png" alt="" style="width: 200px" class="rounded"></div>
+            <p class="about-text">
+                Hello! I'm Abdallah, a Digital Security Technologist with a B.Sc. in Cybersecurity from Al-Hussein Technical University and a Certified Kubernetes Administrator (CKA) credential.
+                <br><br>
+                At the Jordan Open Source Association (JOSA), I build open-source tools that protect journalists and civil society defenders, including a malware analysis API that runs nine tools per Android sample and a Rust scanner that finds personal data in Arabic documents. I work with Kubernetes, microservices, threat intelligence and digital forensics, and I enjoy sharing what I learn through mentoring, workshops and talks.
+            </p>
+            <div class="badge-row">
+                <img src="sec_plus_badge_1.png" alt="CompTIA Security+ badge" style="width: 150px" class="rounded">
+                <span class="cert-badge"><i class="fa-solid fa-certificate"></i>Certified Kubernetes Administrator (CKA)</span>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Skills Section -->
-<div class="container-fluid" style="background-color: #465756; padding: 30px 0;">
-    <h2 style="color: white; text-align: center; font-size: 3.5rem;">Skills</h2>
-    <div class="skills-icons">
-        <div class="skill-card">
-            <i class="fab fa-python skill-icon"></i>
-            <div class="skill-name">Python</div>
-            <div class="skill-category">Programming Language</div>
+<!-- Experience -->
+<section id="experience" style="background-color: var(--green-600);">
+    <h2 class="section-heading">Experience</h2>
+    <hr class="custom-hr">
+    <div class="container" style="max-width: 900px;">
+        <div class="exp-header">
+            <h3>Digital Security Technologist</h3>
+            <p>Jordan Open Source Association (JOSA) &bull; Amman, Jordan &bull; Jul 2024 &ndash; Present</p>
         </div>
-        <div class="skill-card">
-            <i class="fas fa-microchip skill-icon"></i>
-            <div class="skill-name">Assembly</div>
-            <div class="skill-category">Programming Language</div>
+        <div class="exp-item">
+            <h5>Fukhara: Android malware analysis API</h5>
+            <p>Engineered a containerized microservices API with 32 endpoints that runs 9 analysis tools concurrently, producing a threat report in about 5 minutes per sample. Added cross-sample malware campaign correlation using MongoDB storage and ssdeep fuzzy-hash matching, documented the routes with OpenAPI/Swagger, and worked with other teams through Git/GitHub to integrate the backend with the frontend.</p>
+            <p class="tech">Python, FastAPI, Docker, MongoDB, OpenAPI, MobSF, SSDeep, APKiD, Quark Engine, YARA</p>
         </div>
-        <div class="skill-card">
-            <i class="fas fa-cube skill-icon"></i>
-            <div class="skill-name">VirtualBox</div>
-            <div class="skill-category">Virtualization</div>
+        <div class="exp-item">
+            <h5>Akhtabooti: Arabic personal data scanner</h5>
+            <p>Built an offline, high-performance Rust library and terminal UI that detects personal data in Arabic documents across 5 identity categories (Jordanian and Syrian IDs, passports, refugee documents), using Arabic text normalization, Jaro-Winkler fuzzy matching and lightweight offline OCR (PaddleOCR).</p>
+            <p class="tech">Rust, PaddleOCR, ratatui</p>
         </div>
-        <div class="skill-card">
-            <i class="fas fa-server skill-icon"></i>
-            <div class="skill-name">VMware</div>
-            <div class="skill-category">Virtualization</div>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-database skill-icon"></i>
-            <div class="skill-name">Oracle</div>
-            <div class="skill-category">Database</div>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-java skill-icon"></i>
-            <div class="skill-name">Java</div>
-            <div class="skill-category">Programming Language</div>
+        <div class="exp-item">
+            <h5>Signal-to-Helpdesk workflow</h5>
+            <p>Developed custom Lua plugins that connect Signal and Zammad for secure two-way ticketing, hardened the Zammad webhooks, and published an open-source guide on GitHub.</p>
+            <p class="tech">Lua, Zammad, Signal, Docker</p>
         </div>
     </div>
-    <div class="skills-icons">
-        <div class="skill-card">
-            <i class="fab fa-cuttlefish skill-icon"></i>
-            <div class="skill-name">C++</div>
-            <div class="skill-category">Programming Language</div>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-database skill-icon"></i>
-            <div class="skill-name">MySQL</div>
-            <div class="skill-category">Database</div>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-html5 skill-icon"></i>
-            <div class="skill-name">HTML</div>
-            <div class="skill-category">Web Development</div>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-css3-alt skill-icon"></i>
-            <div class="skill-name">CSS</div>
-            <div class="skill-category">Web Development</div>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-js skill-icon"></i>
-            <div class="skill-name">JavaScript</div>
-            <div class="skill-category">Web Development</div>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-linux skill-icon"></i>
-            <div class="skill-name">Linux</div>
-            <div class="skill-category">Operating System</div>
-        </div>
-    </div>
-</div>
+</section>
 
-<div class="container-fluid" style="background-color: #536261; padding: 40px 0;" id="projects">
-    <h2 style="color: #C5C5C5; text-align: center; font-size: 2.5rem;">Projects Overview</h2>
+<!-- Skills -->
+<section id="skills" style="background-color: var(--green-700);">
+    <h2 class="section-heading" style="color: #fff;">Skills</h2>
+    <hr class="custom-hr">
+
+    <div class="skill-group">
+        <h4>Infrastructure &amp; Cloud-Native</h4>
+        <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-dharmachakra"></i>Kubernetes</span>
+            <span class="skill-tag"><i class="fab fa-docker"></i>Docker</span>
+            <span class="skill-tag"><i class="fab fa-linux"></i>Linux</span>
+            <span class="skill-tag"><i class="fas fa-cogs"></i>Ansible</span>
+            <span class="skill-tag"><i class="fas fa-chart-line"></i>Prometheus</span>
+            <span class="skill-tag"><i class="fas fa-chart-area"></i>Grafana</span>
+            <span class="skill-tag"><i class="fab fa-git-alt"></i>Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i>GitHub</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4>Development &amp; Data</h4>
+        <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-python"></i>Python</span>
+            <span class="skill-tag"><i class="fas fa-bolt"></i>FastAPI</span>
+            <span class="skill-tag"><i class="fas fa-gear"></i>Rust</span>
+            <span class="skill-tag"><i class="fab fa-js"></i>JavaScript</span>
+            <span class="skill-tag"><i class="fas fa-moon"></i>Lua</span>
+            <span class="skill-tag"><i class="fab fa-java"></i>Java</span>
+            <span class="skill-tag"><i class="fas fa-terminal"></i>Bash</span>
+            <span class="skill-tag"><i class="fas fa-microchip"></i>Assembly</span>
+            <span class="skill-tag"><i class="fas fa-database"></i>PostgreSQL</span>
+            <span class="skill-tag"><i class="fas fa-database"></i>MongoDB</span>
+            <span class="skill-tag"><i class="fas fa-magnifying-glass"></i>Elasticsearch</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4>Security &amp; Threat Intelligence</h4>
+        <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-user-secret"></i>Threat Intelligence</span>
+            <span class="skill-tag"><i class="fas fa-bug"></i>Malware Analysis</span>
+            <span class="skill-tag"><i class="fas fa-code"></i>Reverse Engineering</span>
+            <span class="skill-tag"><i class="fas fa-fingerprint"></i>Digital Forensics</span>
+            <span class="skill-tag"><i class="fas fa-mobile-screen"></i>Mobile Forensics</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4>Languages</h4>
+        <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-language"></i>Arabic (Fluent)</span>
+            <span class="skill-tag"><i class="fas fa-language"></i>English (Fluent)</span>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" style="background-color: var(--green-600);">
+    <h2 class="section-heading">Projects</h2>
+    <hr class="custom-hr">
     <div class="d-flex flex-wrap justify-content-center">
         <div class="project-card">
-            <div class="project-name">JavaGUI</div>
-            <div class="project-desc">Custom made GUI</div>
-            <div class="project-lang">Java</div>
-            <a href="https://github.com/AcePhire/JavaGUI"><button class="view-btn">View</button></a>
+            <div>
+                <div class="project-name">Nodivizer</div>
+                <div class="project-desc">A Tauri desktop app for investigators to analyze graph data, with custom node attributes, filtering, color coding and save/load.</div>
+            </div>
+            <div>
+                <div class="project-lang">JavaScript, Cytoscape.js, Express, Tauri</div>
+                <a href="https://github.com/AcePhire/nodivizer" target="_blank" rel="noopener"><button class="view-btn">View</button></a>
+            </div>
         </div>
         <div class="project-card">
-            <div class="project-name">Peace</div>
-            <div class="project-desc">Examination system made using secure coding principles</div>
-            <div class="project-lang">Java</div>
-            <a href="https://github.com/AcePhire/Peace"><button class="view-btn">View</button></a>
+            <div>
+                <div class="project-name">Progray</div>
+                <div class="project-desc">A lightweight web controller for secure remote management: run applications, capture screenshots and download files.</div>
+            </div>
+            <div>
+                <div class="project-lang">JavaScript</div>
+                <a href="https://github.com/AcePhire/Progray" target="_blank" rel="noopener"><button class="view-btn">View</button></a>
+            </div>
+        </div>
+	<div class="project-card">
+            <div>
+                <div class="project-name">Peace</div>
+                <div class="project-desc">Examination system built with secure coding principles.</div>
+            </div>
+            <div>
+                <div class="project-lang">Java</div>
+                <a href="https://github.com/AcePhire/Peace" target="_blank" rel="noopener"><button class="view-btn">View</button></a>
+            </div>
         </div>
         <div class="project-card">
-            <div class="project-name">The-15</div>
-            <div class="project-desc">A 15 puzzle game made using Unity</div>
-            <div class="project-lang">ASP.NET & C#</div>
-            <a href="https://github.com/AcePhire/The-15"><button class="view-btn">View</button></a>
+            <div>
+                <div class="project-name">Disobedient</div>
+                <div class="project-desc">2D point-based survival game with procedural map generation.</div>
+            </div>
+            <div>
+                <div class="project-lang">C++</div>
+                <a href="https://github.com/AcePhire/Disobedient" target="_blank" rel="noopener"><button class="view-btn">View</button></a>
+            </div>
         </div>
-        <div class="project-card">
-            <div class="project-name">Disobedient</div>
-            <div class="project-desc">2D Point-based Survival Game. Contains map generation feature.</div>
-            <div class="project-lang">C++</div>
-            <a href="https://github.com/AcePhire/Disobedient"><button class="view-btn">View</button></a>
-        </div>
-        <div class="project-card">
-            <div class="project-name">Progray</div>
-            <div class="project-desc">Remote web computer controler: open apps, screenshot, shut down, and download files.</div>
-            <div class="project-lang">C++</div>
-            <a href="https://github.com/AcePhire/Progray"><button class="view-btn">View</button></a>
-        </div>
-    </div>
-</div>
 
-<footer class="text-white text-center py-3" style="background-color: #2C423F">
-    <p>&copy; 2024 Abdallah Joudeh. All rights reserved.</p>
+    </div>
+</section>
+
+<!-- Certifications & Education -->
+<section id="credentials" style="background-color: var(--green-800);">
+    <h2 class="section-heading">Certifications &amp; Education</h2>
+    <hr class="custom-hr">
+    <div class="edu-card">
+        <p><strong>Certified Kubernetes Administrator (CKA)</strong><br>The Linux Foundation / CNCF</p>
+        <p><strong>CompTIA Security+</strong></p>
+        <br>
+        <h4>Al-Hussein Technical University (HTU)</h4>
+        <p>B.Sc. in Cybersecurity &bull; GPA 3.74<br>Amman, Jordan &bull; Graduated Mar 2026</p>
+    </div>
+</section>
+
+<footer class="text-white text-center py-3" style="background-color: var(--green-900);">
+    <p class="mb-0">&copy; 2026 Abdallah Joudeh. All rights reserved.</p>
 </footer>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
